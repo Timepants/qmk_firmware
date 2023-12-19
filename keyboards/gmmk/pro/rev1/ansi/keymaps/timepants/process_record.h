@@ -13,18 +13,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#pragma once
+#include "timepants.h"
 
-#define COMBO_TERM 100
 
-#define RGB_MATRIX_KEYPRESSES
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
-#define RGB_MATRIX_TIMEOUT 90000
+bool process_record_secrets(uint16_t keycode, keyrecord_t *record);
 
-#define MACRO_TIMER 5
+bool process_record_encoder(uint16_t keycode, keyrecord_t *record);
 
-#define TAPPING_TOGGLE 3
+bool process_record_fun(uint16_t keycode, keyrecord_t *record);
 
-#define WPM_SMOOTHING 0.1
-
-// this is for macOS so keyboard can work after sleep
-#define NO_USB_STARTUP_CHECK
+void keyboard_post_init_encoder(void);
